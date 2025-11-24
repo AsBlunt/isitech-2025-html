@@ -1,0 +1,19 @@
+p {
+    color: blueviolet;
+}
+
+body p {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 200px;
+    height: 100px;
+    background-color: blueviolet;
+    padding: 20px;
+    border: 10px solid yellow; 
+}
