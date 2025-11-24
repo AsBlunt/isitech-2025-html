@@ -1,7 +1,3 @@
-# Tuto GIT
+# Portfolio
 
-'''sh
-git init 
-git status
-git add . 
-git commit –m "" 
+Voici actuellement mon object : https://abhishekpanthee.com.np/
