@@ -1,89 +1,63 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    box-sizing: border-box;
 }
 
-.element {
-    width: 100%;
-    height: 100vh;
-    /* ou 100% selon besoin */
+html {
+    font-family: var(--ff-poppins);
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
-
-main {
-    background-color: #11151D;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+:root {
+    --color-primary: hsl(0, 0%, 7%);
+    /* Smoky Black */
+    --color-secondary: hsl(240, 1%, 17%);
+    /* Onyx */
+    --color-accent: hsl(0, 0%, 84%);
+    /* Gris */
+    --color-text: hsl(0, 0%, 100%);
+    /* Blanc 1 */
+    --color-text-light: hsl(0, 0%, 98%);
+    /* Blanc 2 */
+    --color-background: hsl(0, 0%, 7%);
+    /* Smoky Black */
+    --color-background-alt: hsl(240, 1%, 17%);
+    /* Onyx */
 }
 
-.profile-card {
-    background-color: #222D41;
-    border-radius: 15px;
-    border-radius: 30px;
-    text-align: center;
-    width: 320px;
-    padding: 115px 60px 30px 30px;
+body {
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #11151D
-}
-
-h1 {
-    color: #11151D;
-}
-
-p {
-    color: #11151D;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+    background-color: var(--color-primary);
+    color: white;
     padding: 1rem 2rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links {
-    display: flex;
+nav ul {
     list-style: none;
+    display: flex;
     gap: 2rem;
 }
 
-.burger {
-    display: none;
-    cursor: pointer;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        top: 70px;
-        background-color: #fff;
-        width: 60%;
-        height: calc(100vh - 70px);
-        flex-direction: column;
-        align-items: center;
-        padding-top: 2rem;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in;
-    }
+nav a:hover {
+    color: var(--color-secondary);
+}
 
-    .burger {
-        display: block;
-    }
+nav a.active {
+ border-bottom: 2px solid var(--color-accent);
 }
