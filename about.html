@@ -1,49 +1,185 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/CSS/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos - Kratos</title>
-    <link rel="icon" type="icon" href="/images/icon.png">
+    <title>About me | Portfolio</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="icon" type="image/png" href="/images/icon.png">>
 </head>
 
 <body>
-    <header>
-        <nav class="main-nav">
-            <ul class="menu">
-                <li><a href="/index.html">Accueil</a></li>
-                <li><a href="/about.html">A propos</a></li>
-                <li><a href="/projects.html">Projets</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="parcours">
-        <h2>Mon Parcours</h2>
-        <article>
-            <h3>Guerrier de Sparte</h3>
-        </article>
-    </section>
-    <section id="competences">
-        <h2>Compétences techniques</h2>
-    </section>
-    <section id="centre-interet">
-        <h2>Centres d'intérêt</h2>
-    </section>
-    <section>
-        <h2>Mon CV</h2>
-        <a href="mon-cv.pdf" download="CV_Kratos.pdf">Téléchargez et visualisez mon CV.</a>
-    </section>
+    <main>
+        <aside class="sidebar " data-sidebar> <!-- Même barre latérale avec l'avatar et infos perso que sur mon exemple -->
+            <div class="sidebar-info"> <!-- Partie avatar + Statut + Bouton -->
+                <figure class="avatar-box"> <!-- Classe qui vient définir la box qui contiendra mon avatar -->
+                    <img src="/images/avatar.png" alt="avatar" width="80">
+                </figure>
+
+                <div class="info-content"> <!-- Classe qui va contenir le nom et le titre -->
+                    <h1 class="name" title="Richard Hanrick">Chris</h1>
+                    <p class="title">IT Artist</p>
+                </div>
+
+                <button class="info-more-btn" data-sidebar-btn> <!-- Bouton pour défiler les infos (en format réduit) -->
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon> <!-- Petite flèche comme icone de bouton -->
+                </button>
+            </div>
+            <div class="sidebar-info-more"> <!-- Partie infos supplémentaires : mail, tel... -->
+                <div class="separator"></div> <!-- Barre séparatrice -->
+
+                <ul class="contacts-list"> <!-- Infos perso -->
+                    <li class="contact-item"> <!-- Ici toute la partie du mail -->
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon> <!-- Icone d'enveloppe mail -->
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:richard@example.com" class="contact-link">chrisexample.com</a> <!-- Mail cliquable et action de mailing direct -->
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+12133522795" class="contact-link">06 07 08 XX XX</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="1982-06-23">May 15, 1998</time>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Paris, France</address>
+                        </div>
+                    </li> <!-- Fin de la partie infos supp-->
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list"> <!-- Icone de réseaux sociaux, redirection vers liens -->
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-facebook"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-twitter"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+        </aside> <!-- Fin de la barre latérale -->
+
+        <div class="main-content"> <!-- Partie contenant la navbar et les 4 onglets de pages -->
+            <nav class="navbar">
+                <ul class="navbar-list"> <!-- Navbar avec 4 pages -->
+                    <li><a href="/index.html" class="navbar-item"><button class="navbar-link">Home</button></a></li>
+                    <li><a href="/about.html" class="navbar-item"><button class="navbar-link">About</button></a></li>
+                    <li><a href="/projects.html" class="navbar-item"><button class="navbar-link">Projects</button></a></li>
+                    <li><a href="/contact.html" class="navbar-item"><button class="navbar-link">Contact</button></a></li>
+                </ul>
+            </nav>
+             <article class="resume active" data-page="resume">
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+
+                <section class="timeline"> <!-- Partie contenant des infos de style experience d'un CV -->
+                    <h3 class="h3">Education</h3>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">University IT Arts</h4>
+                            <span>2018 - 2019</span>
+                            <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim assumenda soluta dolores
+                        provident quisquam ipsam ut.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Paris Academy of Art</h4>
+                            <span>2017 - 2018</span>
+                            <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim assumenda soluta dolores
+                        provident quisquam ipsam ut.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="timeline">
+                    <h3 class="h3">Experiences</h3>
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Web Designer</h4>
+                            <span>2022 - Present</span>
+                            <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim assumenda soluta dolores
+                        provident quisquam ipsam ut.</p>
+                        </li>
+
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Software Developer</h4>
+                            <span>2019 - 2021</span>
+                            <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim assumenda soluta dolores
+                        provident quisquam ipsam ut.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="skill"> <!-- Partie contenant 2 compétences avec une barre représentant le niveau en % -->
+                    <h3 class="h3 skills-title">My Skills</h3>
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Software Design</h5>
+                                <data value="80">80%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 80%;"></div>
+                            </div>
+                        </li>
+
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <h5 class="h5">Cinematography</h5>
+                                <data value="90">90%</data>
+                            </div>
+
+                            <div class="skills-progress-bg">
+                                <div class="skills-progress-fill" style="width: 90%;"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2025 Kratos. Tous droits réservés.</p>
-        <ul class="social-links">
-            <li><a href="https://fr.wikipedia.org/wiki/Kratos_(God_of_War)" target="_blank">Wikipedia</a></li>
-            <li><a href="https://www.playstation.com/fr-fr/games/god-of-war/" target="_blank">Playstation</a></li>
-            <li><a href="https://store.steampowered.com/app/1593500/God_of_War/" target="_blank">Steam</a></li>
-        </ul>
+         <p class="copyright">© 2025 Chris. Tous droits réservés.</p>
     </footer>
+    <script src="/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

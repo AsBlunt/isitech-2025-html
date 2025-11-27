@@ -1,48 +1,154 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/CSS/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets - Kratos</title>
-    <link rel="icon" type="icon" href="/images/icon.png">
-</head>
+    <title>Projects | Portfolio</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="icon" type="image/png" href="/images/icon.png">></head>
 
 <body>
-    <header>
-        <nav class="main-nav">
-            <ul class="menu">
-                <li><a href="/index.html">Accueil</a></li>
-                <li><a href="/about.html">A propos</a></li>
-                <li><a href="/projects.html">Projets</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <article class="project-card">
-        <img src="/images/projets/project1.jpg" alt="Image du projet 1">
-        <h3>Nom du projet</h3>
-        <p>Description courte et percutante du projet en 2-3 phrases.</p>
-        <ul class="technologies">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-        </ul>
-        <div class="project-links">
-            <a href="#" class="btn-secondary">Voir le projet</a>
-            <a href="#" class="btn-secondary">Voir le code</a>
-        </div>
+    <main>
+        <aside class="sidebar " data-sidebar> <!-- Même barre latérale avec l'avatar et infos perso que sur mon exemple -->
+            <div class="sidebar-info"> <!-- Partie avatar + Statut + Bouton -->
+                <figure class="avatar-box"> <!-- Classe qui vient définir la box qui contiendra mon avatar -->
+                    <img src="/images/avatar.png" alt="avatar" width="80">
+                </figure>
 
-    </article>
+                <div class="info-content"> <!-- Classe qui va contenir le nom et le titre -->
+                    <h1 class="name" title="Richard Hanrick">Chris</h1>
+                    <p class="title">IT Artist</p>
+                </div>
+
+                <button class="info-more-btn" data-sidebar-btn> <!-- Bouton pour défiler les infos (en format réduit) -->
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon> <!-- Petite flèche comme icone de bouton -->
+                </button>
+            </div>
+            <div class="sidebar-info-more"> <!-- Partie infos supplémentaires : mail, tel... -->
+                <div class="separator"></div> <!-- Barre séparatrice -->
+
+                <ul class="contacts-list"> <!-- Infos perso -->
+                    <li class="contact-item"> <!-- Ici toute la partie du mail -->
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon> <!-- Icone d'enveloppe mail -->
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:richard@example.com" class="contact-link">chrisexample.com</a> <!-- Mail cliquable et action de mailing direct -->
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+12133522795" class="contact-link">06 07 08 XX XX</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="1982-06-23">May 15, 1998</time>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Paris, France</address>
+                        </div>
+                    </li> <!-- Fin de la partie infos supp-->
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list"> <!-- Icone de réseaux sociaux, redirection vers liens -->
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-facebook"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-twitter"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+        </aside> <!-- Fin de la barre latérale -->
+
+        <div class="main-content"> <!-- Partie contenant la navbar et les 4 onglets de pages -->
+            <nav class="navbar">
+                <ul class="navbar-list"> <!-- Navbar avec 4 pages -->
+                    <li><a href="/index.html" class="navbar-item"><button class="navbar-link">Home</button></a></li>
+                    <li><a href="/about.html" class="navbar-item"><button class="navbar-link">About</button></a></li>
+                    <li><a href="/projects.html" class="navbar-item"><button class="navbar-link">Projects</button></a>
+                    </li>
+                    <li><a href="/contact.html" class="navbar-item"><button class="navbar-link">Contact</button></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <article class="portfolio active" data-page="portfolio">
+                <header>
+                    <h2 class="h2 article-title">My Projects</h2>
+                </header>
+
+                <section class="projects"> <!-- Partie contenant les images de projets avec titre -->
+                    <ul class="project-list">
+                        <li class="project-item active">
+                            <a>
+                                <figure class="project-img">
+                                    <img src="/images/projets/project1.png" alt="finance" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Chess</h3>
+                                <p class="project-category">Mobile App Development</p>
+                            </a>
+                        </li>
+                        <li class="project-item active">
+                            <a>
+                                <figure class="project-img">
+                                    <img src="/images/projets/project2.jpg" alt="finance" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Album Cover</h3>
+                                <p class="project-category">Art Design</p>
+                            </a>
+                        </li>
+                        <li class="project-item active">
+                            <a>
+                                <figure class="project-img">
+                                    <img src="/images/projets/project3.png" alt="finance" loading="lazy">
+                                </figure>
+                                <h3 class="project-title">Asia Landscape</h3>
+                                <p class="project-category">Photography</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2025 Kratos. Tous droits réservés.</p>
-        <ul class="social-links">
-            <li><a href="https://fr.wikipedia.org/wiki/Kratos_(God_of_War)" target="_blank">Wikipedia</a></li>
-            <li><a href="https://www.playstation.com/fr-fr/games/god-of-war/" target="_blank">Playstation</a></li>
-            <li><a href="https://store.steampowered.com/app/1593500/God_of_War/" target="_blank">Steam</a></li>
-        </ul>
+        <p class="copyright">© 2025 Chris. Tous droits réservés.</p>
     </footer>
+    <script src="/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

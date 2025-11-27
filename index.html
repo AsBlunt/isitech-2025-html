@@ -1,60 +1,183 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Kratos</title>
+    <title>Home | Portfolio</title>
     <link rel="stylesheet" href="/CSS/styles.css">
-    <link rel="icon" href="/images/icon.png" type="image">
+    <link rel="icon" type="image/png" href="/images/icon.png">>
 </head>
 
 <body>
-    <header>
-        <nav class="main-nav">
-            <ul class="menu">
-                <li><a href="/index.html" class="active">Accueil</a></li>
-                <li><a href="/about.html">À propos</a></li>
-                <li><a href="/projects.html">Projets</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
-        <section id="hero">
-            <img src="images/profile.png" alt="Portrait de Kratos">
-            <h1>Kratos</h1>
-            <p class="subtitle">Demi-dieu</p>
-        </section>
-        <section id="presentation">
-            <h2>Qui suis-je ?</h2>
-            <p>
-                Je suis <strong>Kratos</strong>, le Fantôme de Sparte. J’ai servi Arès, massacré des peuples entiers,
-                et, dans un accès de rage, tué ma propre femme et ma fille. Leurs cendres ont collé à ma peau pour
-                l’éternité.
-                Trompé par les dieux, j’ai juré vengeance : j’ai détruit Arès, puis Zeus, et fait tomber tout l’Olympe
-                dans le sang et les flammes.
-                À la fin, il ne restait que moi, vide et maudit.
-            </p>
-            <p>
-                Aujourd’hui, je vis dans le Nord glacé avec mon fils <strong>Atreus</strong>. Je ne suis plus seulement
-                un tueur ;
-                je suis un père qui lutte pour ne pas répéter ses erreurs. Faye, ma seconde épouse, est morte, mais elle
-                nous a laissé une quête et un espoir.
-                Les dieux nordiques, Odin et Thor, nous traquent déjà. Peu importe : je protégerai mon garçon jusqu’à
-                mon dernier souffle,
-                même si je dois déclencher <strong>Ragnarök</strong> moi-même.
-            </p>
-        </section>
+        <aside class="sidebar " data-sidebar><!-- Même barre latérale avec l'avatar et infos perso que sur mon exemple -->
+            <div class="sidebar-info"> <!-- Partie avatar + Statut + Bouton -->
+                <figure class="avatar-box"> <!-- Classe qui vient définir la box qui contiendra mon avatar -->
+                    <img src="/images/avatar.png" alt="avatar" width="80">
+                </figure>
+
+                <div class="info-content"> <!-- Classe qui va contenir le nom et le titre -->
+                    <h1 class="name" title="Richard Hanrick">Chris</h1>
+                    <p class="title">IT Artist</p>
+                </div>
+
+                <button class="info-more-btn" data-sidebar-btn> <!-- Bouton pour défiler les infos (en format réduit) -->
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon> <!-- Petite flèche comme icone de bouton -->
+                </button>
+            </div>
+            <div class="sidebar-info-more"> <!-- Partie infos supplémentaires : mail, tel... -->
+                <div class="separator"></div> <!-- Barre séparatrice -->
+
+                <ul class="contacts-list"> <!-- Infos perso -->
+                    <li class="contact-item"> <!-- Ici toute la partie du mail -->
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon> <!-- Icone d'enveloppe mail -->
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:richard@example.com" class="contact-link">chrisexample.com</a> <!-- Mail cliquable et action de mailing direct -->
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+12133522795" class="contact-link">06 07 08 XX XX</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="1982-06-23">May 15, 1998</time>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Paris, France</address>
+                        </div>
+                    </li> <!-- Fin de la partie infos supp-->
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list"> <!-- Icone de réseaux sociaux, redirection vers liens -->
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-facebook"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-twitter"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+        </aside> <!-- Fin de la barre latérale -->
+
+        <div class="main-content"> <!-- Partie contenant la navbar et les 4 onglets de pages -->
+            <nav class="navbar">
+                <ul class="navbar-list"> <!-- Navbar avec 4 pages -->
+                    <li><a href="/index.html" class="navbar-item"><button class="navbar-link">Home</button></a></li>
+                    <li><a href="/about.html" class="navbar-item"><button class="navbar-link">About</button></a></li>
+                    <li><a href="/projects.html" class="navbar-item"><button class="navbar-link">Projects</button></a>
+                    </li>
+                    <li><a href="/contact.html" class="navbar-item"><button class="navbar-link">Contact</button></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">Who am I</h2> <!-- Le titre de mon paragraphe -->
+                </header>
+
+                <section class="about-text"> <!-- Mon parapgraphe de présenatation -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim assumenda soluta dolores
+                        provident quisquam ipsam ut tenetur obcaecati facilis atque totam ratione quaerat, minima eum
+                        ipsa quos in. Assumenda.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos tenetur impedit rem
+                        consequatur quisquam unde doloremque eveniet, officia eius ullam vel. Corporis fuga maiores
+                        asperiores? Numquam repellat culpa repudiandae.</p>
+                </section>
+                <section class="service">
+                    <h3 class="h3 service-title">My Services</h3>
+
+                    <ul class="service-list"> <!-- Partie contenant les services, icones et description -->
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Software Design</h4>
+                                <p class="service-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit aliquid.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Web development</h4>
+                                <p class="service-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit aliquid.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Mobile apps</h4>
+                                <p class="service-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit aliquid.</p>
+                            </div>
+                        </li>
+
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Cinematography</h4>
+                                <p class="service-item-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus impedit aliquid.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </div>
     </main>
     <footer>
-        <p>© 2025 Kratos. Tous droits réservés.</p>
-        <ul class="social-links">
-            <li><a href="https://fr.wikipedia.org/wiki/Kratos_(God_of_War)" target="_blank">Wikipedia</a></li>
-            <li><a href="https://www.playstation.com/fr-fr/games/god-of-war/" target="_blank">PlayStation</a></li>
-            <li><a href="https://store.steampowered.com/app/1593500/God_of_War/" target="_blank">Steam</a></li>
-        </ul>
+        <p class="copyright">© 2025 Chris. All rights reserved.</p>
     </footer>
+
+    <script src="/script.js"></script> <!-- Lié au fichier JS pour les scripts (animations...) -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!--Pour afficher les icones de navbar, ex: <io-icon name="..."></ion-icon> -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

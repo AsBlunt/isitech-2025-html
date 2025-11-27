@@ -1,55 +1,142 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/CSS/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Kratos</title>
-    <link rel="icon" type="icon" href="/images/icon.png">
+    <title>Contact | Portfolio</title>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="icon" type="image/png" href="/images/icon.png">>
 </head>
 
 <body>
-    <header>
-        <nav class="main-nav">
-            <ul class="menu">
-                <li><a href="/index.html">Accueil</a></li>
-                <li><a href="/about.html">A propos</a></li>
-                <li><a href="/projects.html">Projets</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="coordonees">
-        <h2>Me contacter</h2>
-        <li></li>
-        <dl>Email</dl>
-        <dl>Téléphone</dl>
-        <dl>Lovalisation</dl>
-        <dl>LinkedIn</dl>
-        <dl>GitHub</dl>
-    </section>
-    <section id="disponibilite">
-        <h2>Disponibilité</h2>
-        <li>Paragraphe indiquant mon statut</li>
-    </section>
-    <form>
-        <input type="text" required>
-        <label for="text">Nom</label>
-        <input type="email" required>
-        <label for="email">Email</label>
-        <textarea id="message" name="message" required></textarea>
-        <label for="message">Votre message</label>
-        <button type=" submit"> </button>
-    </form>
+    <main>
+        <aside class="sidebar " data-sidebar>
+            <!-- Même barre latérale avec l'avatar et infos perso que sur mon exemple -->
+            <div class="sidebar-info"> <!-- Partie avatar + Statut + Bouton -->
+                <figure class="avatar-box"> <!-- Classe qui vient définir la box qui contiendra mon avatar -->
+                    <img src="/images/avatar.png" alt="avatar" width="80">
+                </figure>
+
+                <div class="info-content"> <!-- Classe qui va contenir le nom et le titre -->
+                    <h1 class="name" title="Richard Hanrick">Chris</h1>
+                    <p class="title">IT Artist</p>
+                </div>
+
+                <button class="info-more-btn" data-sidebar-btn>
+                    <!-- Bouton pour défiler les infos (en format réduit) -->
+                    <span>Show Contacts</span>
+                    <ion-icon name="chevron-down"></ion-icon> <!-- Petite flèche comme icone de bouton -->
+                </button>
+            </div>
+            <div class="sidebar-info-more"> <!-- Partie infos supplémentaires : mail, tel... -->
+                <div class="separator"></div> <!-- Barre séparatrice -->
+
+                <ul class="contacts-list"> <!-- Infos perso -->
+                    <li class="contact-item"> <!-- Ici toute la partie du mail -->
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon> <!-- Icone d'enveloppe mail -->
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:richard@example.com" class="contact-link">chrisexample.com</a>
+                            <!-- Mail cliquable et action de mailing direct -->
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+12133522795" class="contact-link">06 07 08 XX XX</a>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Birthday</p>
+
+                            <time datetime="1982-06-23">May 15, 1998</time>
+                        </div>
+                    </li>
+
+                    <li class="contact-item">
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Paris, France</address>
+                        </div>
+                    </li> <!-- Fin de la partie infos supp-->
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list"> <!-- Icone de réseaux sociaux, redirection vers liens -->
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-facebook"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-twitter"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon
+                                name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+        </aside> <!-- Fin de la barre latérale -->
+
+        <div class="main-content"> <!-- Partie contenant la navbar et les 4 onglets de pages -->
+            <nav class="navbar">
+                <ul class="navbar-list"> <!-- Navbar avec 4 pages -->
+                    <li><a href="/index.html" class="navbar-item"><button class="navbar-link">Home</button></a></li>
+                    <li><a href="/about.html" class="navbar-item"><button class="navbar-link">About</button></a></li>
+                    <li><a href="/projects.html" class="navbar-item"><button class="navbar-link">Projects</button></a>
+                    </li>
+                    <li><a href="/contact.html" class="navbar-item"><button class="navbar-link">Contact</button></a>
+                    </li>
+                </ul>
+            </nav>
+
+            <article class="contact active" data-page="contact"> <!-- Partie contenant le form et son contenu -->
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3>
+
+                    <form> <!-- Formulaire -->
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+                            <input type="email" name="email" class="form-input" placeholder="Email Address" required>
+                        </div>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
+                        <button class="form-btn" type="submit"> <!-- Bouton "Send message" -->
+                            <ion-icon name="paper-plane"></ion-icon>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </section>
+            </article>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2025 Kratos. Tous droits réservés.</p>
-        <ul class="social-links">
-            <li><a href="https://fr.wikipedia.org/wiki/Kratos_(God_of_War)" target="_blank">Wikipedia</a></li>
-            <li><a href="https://www.playstation.com/fr-fr/games/god-of-war/" target="_blank">Playstation</a></li>
-            <li><a href="https://store.steampowered.com/app/1593500/God_of_War/" target="_blank">Steam</a></li>
-        </ul>
+        <p class="copyright">© 2025 Chris. Tous droits réservés.</p>
     </footer>
+    <script src="/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
