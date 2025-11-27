@@ -631,7 +631,7 @@ textarea.form-input {
     }
 
     .sidebar, article {
-        max-width: ;width: 950px;
+        width: 950px;
         box-shadow: var(--shadow5);
     }
 
