@@ -631,7 +631,7 @@ textarea.form-input {
     }
 
     .sidebar, article {
-        width: 950px;
+        max-width: ;width: 950px;
         box-shadow: var(--shadow5);
     }
 
@@ -641,6 +641,7 @@ textarea.form-input {
         position: relative;
         width: max-content;
         margin: auto;
+        width: 100%;
     }
 
     .navbar {
@@ -698,7 +699,7 @@ textarea.form-input {
     article { min-height: 100%; }
 
     main {
-        max-width: 1200px;
+        max-width: 90vh;
         margin-inline: auto;
         display: flex;
         justify-content: center;
